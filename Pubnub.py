@@ -77,6 +77,7 @@ if sys.platform.startswith("linux"):
         # Close the socket after 5 unanswered keepalive packets
         (socket.IPPROTO_TCP, socket.TCP_KEEPCNT, 5)
     ]
+"""
 elif sys.platform.startswith("darwin"):
     # From /usr/include/netinet/tcp.h
     socket.TCP_KEEPALIVE = 0x10 # idle time used when SO_KEEPALIVE is enabled
@@ -89,6 +90,8 @@ elif sys.platform.startswith("darwin"):
         # Close the socket after 5 unanswered keepalive packets
         (socket.IPPROTO_TCP, socket.TCP_KEEPCNT, 5)
     ]
+"""
+
 """
 # The Windows code is currently untested
 elif sys.platform.startswith("win"):
